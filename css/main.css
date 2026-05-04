@@ -1,0 +1,110 @@
+/* Toile Pixel - Main (index + category pages) */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+    --bg:        #f5f2ee;
+    --surface:   #ffffff;
+    --text:      #2a2320;
+    --muted:     #7a706a;
+    --accent:    #c9a96e;
+    --border:    #e2dbd3;
+    --pink-card: #EEC9D2;
+    --pink-text: #5a3d47;
+    --blue-card: #BFDFFF;
+    --blue-text: #2f4a5a;
+    --radius:    10px;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+}
+
+.site-header {
+    text-align: center;
+    padding: 60px 20px 40px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 48px;
+}
+
+.site-header .wordmark {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    letter-spacing: .04em;
+    color: var(--text);
+}
+
+.site-header .wordmark span {
+    color: var(--accent);
+    font-style: italic;
+}
+
+.site-header .tagline {
+    margin-top: 8px;
+    font-size: .95rem;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 300;
+}
+
+.breadcrumb {
+    max-width: 960px;
+    margin: -24px auto 32px;
+    padding: 0 24px;
+    font-size: .85rem;
+    color: var(--muted);
+}
+
+.breadcrumb a { color: var(--accent); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 24px 80px;
+}
+
+.card {
+    display: block;
+    padding: 28px 20px;
+    text-align: center;
+    border-radius: var(--radius);
+    box-shadow: 0 2px 8px rgba(0,0,0,.07);
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: .95rem;
+    letter-spacing: .04em;
+    border: 2px solid transparent;
+    transition: transform .2s, border-color .2s, box-shadow .2s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,.12);
+    border-color: var(--accent);
+}
+
+.card-neutral { background: var(--surface); color: var(--text); }
+.card-girl    { background: var(--pink-card); color: var(--pink-text); }
+.card-boy     { background: var(--blue-card); color: var(--blue-text); }
+
+.section-heading {
+    max-width: 960px;
+    margin: 0 auto 28px;
+    padding: 0 24px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    color: var(--text);
+    border-left: 4px solid var(--accent);
+    padding-left: 16px;
+}
