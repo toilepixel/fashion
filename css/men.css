@@ -115,11 +115,20 @@ body::before {
     padding-left: 24px;
 }
 
-/* Gallery */
+.gallery-heading {
+    max-width: 1100px;
+    margin: 0 auto 24px;
+    padding-left: 16px;
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--text);
+    border-left: 4px solid var(--accent2);
+}
 
 .gallery {
     max-width: 1100px;
-    margin: 0 auto 80px;
+    margin: 0 auto 56px;
     padding: 0 24px;
     columns: 3 280px;
     column-gap: 16px;

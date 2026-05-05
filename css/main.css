@@ -39,10 +39,7 @@ body {
     color: var(--text);
 }
 
-.site-header .wordmark span {
-    color: var(--accent);
-    font-style: italic;
-}
+.site-header .wordmark span { color: var(--accent); font-style: italic; }
 
 .site-header .tagline {
     margin-top: 8px;
@@ -101,10 +98,9 @@ body {
 .section-heading {
     max-width: 960px;
     margin: 0 auto 28px;
-    padding: 0 24px;
+    padding-left: 16px;
     font-family: 'Playfair Display', serif;
     font-size: 1.6rem;
     color: var(--text);
     border-left: 4px solid var(--accent);
-    padding-left: 16px;
 }
